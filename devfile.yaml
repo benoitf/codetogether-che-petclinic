@@ -6,7 +6,7 @@ attributes:
 components:
   - name: tools
     container:
-      image: quay.io/eclipse/che-java11-maven:next
+      image: quay.io/devfile/universal-developer-image:ubi8-d433ed6
       endpoints:
         - exposure: none
           name: debug
