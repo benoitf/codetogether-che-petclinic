@@ -55,6 +55,9 @@ commands:
         echo ">> we are here"
         pwd
         ls -la
+        /opt/rh/rh-mysql57/root/usr/bin/mysql -u root < ${PROJECTS_ROOT}/java-spring-petclinic/src/main/resources/db/mysql/user.sql
+        /opt/rh/rh-mysql57/root/usr/bin/mysql -u root petclinic < ${PROJECTS_ROOT}/java-spring-petclinic/src/main/resources/db/mysql/schema.sql
+        /opt/rh/rh-mysql57/root/usr/bin/mysql -u root petclinic < ${PROJECTS_ROOT}/java-spring-petclinic/src/main/resources/db/mysql/data.sql
         echo -e "\e[32mDone.\e[0m Database petclinic was configured"
       group:
         kind: run
