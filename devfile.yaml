@@ -21,6 +21,7 @@ components:
       volumeMounts:
         - name: m2
           path: /home/user/.m2
+
   - name: m2
     volume:
       size: 1G
@@ -48,7 +49,7 @@ components:
 commands:
   - id: prepare-database
     exec:
-      components: mysql
+      component: mysql
       workingDir: ${PROJECTS_ROOT}/java-spring-petclinic
       commandLine: >-
         /opt/rh/rh-mysql57/root/usr/bin/mysql -u root < ${CHE_PROJECTS_ROOT}/web-java-spring-petclinic/src/main/resources/db/mysql/user.sql
