@@ -33,6 +33,7 @@ components:
       endpoints:
         - exposure: none
           name: db
+          protocol: tcp
           targetPort: 3306
       env:
         - name: MYSQL_USER
